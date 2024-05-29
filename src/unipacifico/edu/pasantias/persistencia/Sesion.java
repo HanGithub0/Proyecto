@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unipacifico.edu.pasantias.presentacion;
+package unipacifico.edu.pasantias.persistencia;
 
 /**
  *
