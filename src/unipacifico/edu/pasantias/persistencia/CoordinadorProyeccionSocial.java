@@ -1,5 +1,5 @@
 
-package unipacifico.edu.pasantias.presentacion;
+package unipacifico.edu.pasantias.persistencia;
 
 import java.util.Scanner;
 import unipacifico.edu.pasantias.logica.ConvenioMacro;
@@ -50,8 +50,7 @@ public class CoordinadorProyeccionSocial {
         System.out.print("Estado: ");
         String estado = scanner.nextLine();
 
-        Pasantia pasantia = new Pasantia(codigo, nombreEmpresaPasantia, fechaInicioPasantia, fechaFinalizacionPasantia,
-                numPasantesRequeridos, descripcion, numeroConvenioMacro, estado);
+        Pasantia pasantia = new Pasantia(estado, nombreEmpresa, fechaInicio, fechaFinalizacion, numeroConvenio, descripcion, archivoConvenio, estado);
 
         System.out.println("\nDatos del convenio macro:");
         System.out.println(convenio.getNumeroConvenio());
@@ -66,10 +65,8 @@ public class CoordinadorProyeccionSocial {
         System.out.println(pasantia.getCodigo());
         System.out.println(pasantia.getNombreEmpresa());
         System.out.println(pasantia.getFechaInicio());
-        System.out.println(pasantia.getFechaFinalizacion());
-        System.out.println(pasantia.getNumPasantesRequeridos());
+        System.out.println(pasantia.getFechaFinalizacion());        
         System.out.println(pasantia.getDescripcion());
-        System.out.println(pasantia.getNumeroConvenioMacro());
         System.out.println(pasantia.getEstado());
         
         scanner.close();

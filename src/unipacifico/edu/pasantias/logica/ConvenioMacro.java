@@ -1,7 +1,9 @@
 
 package unipacifico.edu.pasantias.logica;
+import java.io.Serializable;
 import java.util.Scanner;
-public class ConvenioMacro {
+
+public class ConvenioMacro implements Serializable{
     int numeroConvenio;
     String fechaInicio;
     String fechaFinalizacion;
@@ -10,6 +12,18 @@ public class ConvenioMacro {
     String representante;
     String archivoConvenio;
     boolean activo;
+
+    public ConvenioMacro(int numeroConvenio, String fechaInicio, String fechaFinalizacion, String nombreEmpresa, String correoRepresentante, String representante, String archivoConvenio, boolean activo) {
+        this.numeroConvenio = numeroConvenio;
+        this.fechaInicio = fechaInicio;
+        this.fechaFinalizacion = fechaFinalizacion;
+        this.nombreEmpresa = nombreEmpresa;
+        this.correoRepresentante = correoRepresentante;
+        this.representante = representante;
+        this.archivoConvenio = archivoConvenio;
+        this.activo = activo;
+    }
+     
 
     public int getNumeroConvenio() {
         return numeroConvenio;
@@ -64,6 +78,11 @@ public class ConvenioMacro {
 
     public void desactivarConvenio() {
         this.activo = false;
+    }
+    
+    @Override
+    public String toString() {
+        return numeroConvenio + " - " + nombreEmpresa;
     }
 
 }
